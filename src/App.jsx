@@ -1,10 +1,19 @@
-import NewGame from "./components/NewGame"
+import { useState } from "react";
+import NewGame from "./components/NewGame";
 
 function App() {
+  const [player, setPlayer] = useState();
 
-  const gameSetHandler = (level) => {
-    console.log(level)
-  }
+  const gameSetHandler = (level, name) => {
+    setPlayer(
+      {
+        level: level, // Can be written as level (without semicolon)
+        name: name, // Can be written as name
+      }
+    )
+  };
+
+  console.log(player);
 
   return (
     <>
