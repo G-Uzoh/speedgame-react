@@ -5,7 +5,7 @@ const Game = ({ score, circles, handleStop }) => {
     <div>
       <p>{score}</p>
       {/* Underscore is used to replace map elements which are not used in the code */}
-      <div>
+      <div className="circle-container">
         {circles.map((_, i) => (
           <Circle key={i} />
         ))}

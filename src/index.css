@@ -27,11 +27,16 @@ h1 {
   line-height: 1.1;
 }
 
+.circle-container {
+  display: flex;
+}
+
 .circle {
   background: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 7px;
   height: 100px;
   width: 100px;
   color: #333;
