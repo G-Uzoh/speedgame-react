@@ -26,3 +26,27 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+.circle {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  color: #333;
+  border-radius: 50%;
+}
+
+/* Game button styles */
+button {
+  background-color: #466bd1;
+  color: #e2e2e2;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 10rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
