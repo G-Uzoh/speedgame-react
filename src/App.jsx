@@ -17,7 +17,6 @@ function App() {
     console.log('game stopped')
     setGameOver(!gameOver)
     setGameInProgress(!gameInProgress);
-    setGameLaunch(!setGameLaunch)
   }
 
   const gameSetHandler = (level, name) => {
@@ -42,14 +41,19 @@ function App() {
     setGameInProgress(!gameInProgress);
   };
 
+  const handleCloseModal = () => {
+    setGameOver(!gameOver)
+    setGameLaunch(!gameLaunch)
+  }
+
 
   return (
     <>
       <h1>Speed game</h1>
-      {/* Conditional redering */}
+      {/* Conditional rendering */}
       {gameLaunch && <NewGame onclick={gameSetHandler} />}
       {gameInProgress && <Game score={score} circles={circles} handleStop={handleStop} />}
-      {gameOver && <GameOver />}
+      {gameOver && <GameOver handleCloseModal={handleCloseModal} />}
     </>
   )
 }
