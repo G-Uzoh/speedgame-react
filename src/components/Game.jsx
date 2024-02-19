@@ -1,16 +1,16 @@
-import Circle from "../UI components/Circle";
+import Square from "../UI components/Square";
 
-const Game = ({ score, circles, handleStop }) => {
+const Game = ({ score, squares, handleSquareClick, handleStop, current }) => {
   return (
     <div>
-      <p>{score}</p>
+      <p className="game-score">{score}</p>
       {/* Underscore is used to replace map elements which are not used in the code */}
-      <div className="circle-container">
-        {circles.map((_, i) => (
-          <Circle key={i} />
+      <div className="square-container">
+        {squares.map((_, i) => (
+          <Square key={i} id={i} click={() => handleSquareClick(i)} current={current === i} />
         ))}
       </div>
-      <button onClick={handleStop}>Stop</button>
+      <button className="stop-btn" onClick={handleStop}>Stop</button>
     </div>
   );
 };
